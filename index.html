@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ChefLab 🍕🧪</title>
+
+    <!-- ICONO EN PESTAÑA -->
+    <link rel="icon" href="https://i.imgur.com/tuLogo.png">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: #f8f9fa;
+        }
+
+        /* HEADER */
+        header {
+            background: #d62828;
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-container img {
+            border-radius: 50%;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* HERO */
+        .hero {
+            background: linear-gradient(90deg, #d62828, #f77f00);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .hero h2 {
+            font-size: 40px;
+        }
+
+        /* MENU */
+        .menu {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: white;
+            width: 250px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+        }
+
+        .card h3 {
+            margin: 10px;
+        }
+
+        .card p {
+            margin: 10px;
+        }
+
+        button {
+            background: #d62828;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 90%;
+            margin: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #a61e1e;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="https://i.imgur.com/tuLogo.png" width="50" height="50">
+            <h1>ChefLab 🍕🧪</h1>
+        </div>
+
+        <nav>
+            <a href="#">Inicio</a>
+            <a href="#">Menú</a>
+            <a href="#">Promos</a>
+            <a href="#">Contacto</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>¡La mejor pizza hecha con ciencia! 🍕🧪</h2>
+        <p>Ordena rápido con nuestro asistente inteligente</p>
+    </section>
+
+    <section class="menu">
+
+        <div class="card">
+            <img src="https://i.imgur.com/9bK0R6S.png">
+            <h3>Pizza Pepperoni</h3>
+            <p>$120</p>
+            <button onclick="alert('Usa el chat para ordenar 🍕')">Ordenar</button>
+        </div>
+
+        <div class="card">
+            <img src="https://i.imgur.com/7yUvePI.png">
+            <h3>Pizza Hawaiana</h3>
+            <p>$130</p>
+            <button onclick="alert('Usa el chat para ordenar 🍕')">Ordenar</button>
+        </div>
+
+        <div class="card">
+            <img src="https://i.imgur.com/6QK0FQp.png">
+            <h3>Pizza Vegetariana</h3>
+            <p>$125</p>
+            <button onclick="alert('Usa el chat para ordenar 🍕')">Ordenar</button>
+        </div>
+
+    </section>
+
+    <footer>
+        © 2026 ChefLab 🍕🧪 - Todos los derechos reservados
+    </footer>
+
+    <!-- CHATBOT REAL -->
+    <script>
+        window.watsonAssistantChatOptions = {
+            integrationID: "7109575c-0853-4ee7-bca9-90080fff35f6",
+            region: "us-south",
+            serviceInstanceID: "eb6952fe-cff9-400d-9bde-a13fcc025b77",
+            onLoad: async (instance) => { await instance.render(); }
+        };
+        setTimeout(function () {
+            const t = document.createElement('script');
+            t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+            document.head.appendChild(t);
+        });
+    </script>
+
+</body>
+
+</html>
